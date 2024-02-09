@@ -1,0 +1,38 @@
+html {
+    font-family: 'Open Sans', sans-serif;
+}
+table {
+    border-collapse: collapse;
+    width: 800px;
+}
+
+th, td {
+    padding: 15px;           
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f9b206;
+    color: black;
+    font-size: 16px;
+}
+
+tr:hover {
+    font-weight: bold;
+}
+
+#inputNumber {
+    width: 20%;
+    height: 40px;
+    border: 1px solid lightgrey;
+    font-size: 16px;
+    text-align: center;
+    margin-right: 1%;
+    padding: 1%;
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
