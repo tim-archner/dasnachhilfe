@@ -1,38 +1,102 @@
 html {
     font-family: 'Open Sans', sans-serif;
 }
-table {
-    border-collapse: collapse;
-    width: 800px;
+
+body {
+    margin: 0; /* Remove default body margin */
+    display: flex;
+    justify-content: center; /* Center the container horizontally */
 }
 
-th, td {
-    padding: 15px;           
-    text-align: left;
+.container {
+    display: flex;
+    width: 800px;
+    gap: 0px; /* Adjust the gap between tables */
+    padding: 20px; /* Add some padding around the tables */
+    overflow-x: auto; /* Enable horizontal scrolling if needed */
+}
+
+.table-wrapper {
+    flex: 1; /* Take up available space */
+    overflow-x: auto; /* Enable horizontal scrolling if needed */
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 400px; /* Limit maximum width of each table */
+}
+
+th,
+td {
+    text-align: center;
+    padding: 15px;
     border-bottom: 1px solid #ddd;
+    background-color: white;
+    height: 50px;
 }
 
 th {
     background-color: #f9b206;
-    color: black;
-    font-size: 16px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px;
+    text-align: center;
+    height: 50px;
 }
 
 tr:hover {
     font-weight: bold;
+    background-color: white;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 #inputNumber {
-    width: 20%;
+    width: 60px;
     height: 40px;
-    border: 1px solid lightgrey;
-    font-size: 16px;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
     text-align: center;
-    margin-right: 1%;
-    padding: 1%;
+    background-color: #f9b206;
+    color: white;
+    margin: 0 5px;
 }
 
-.table-wrapper {
-    width: 100%;
-    overflow-x: auto;
+#inputNumber::-webkit-outer-spin-button,
+#inputNumber::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+}
+
+.input-group button {
+    width: 40px;
+    height: 40px;
+    border: 1px solid lightgrey;
+    background-color: white;
+    color: #f9b206;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+    /* Adjustments for smaller screens */
+    .container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .table-wrapper {
+        max-width: none; /* Remove max-width for smaller screens */
+    }
 }
