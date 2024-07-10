@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kurspreisrechner D.A.S. Nachhilfeinstitut</title>
-    <link rel="stylesheet" href="das.css">
+    <link rel="stylesheet" href="style.css">
     <script src="rechner.js"></script>
 </head>
 
@@ -15,96 +15,47 @@
             <table>
                 <tr>
                     <th>Anzahl Kurse</th>
-                </tr>
-                <tr>
-                    <td>Preis pro Kurs</td>
-                <tr>
-                    <td>Preis gesamt</td>
-                </tr>
-                <tr>
-                    <td>Anzahl Monate <br> (bei 1 Kurs pro Woche)</td>
-                </tr>
-                <tr>
-                    <td>Monatsrate</td>
-                </tr>
-                <tr>
-                    <td>Ersparnis gegenüber 10er-Karten</td>
-                </tr>
-            </table>
-        </div>
-        <div class="table-wrapper">
-            <table>
-                <tr>
                     <th>10</th>
-                </tr>
-                <tr>
-                    <td id="price10">33.97 €</td>
-                <tr>
-                    <td id="total10">339.73 €</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                </tr>
-                <tr>
-                    <td>113.23 €</td>
-                </tr>
-                <tr>
-                    <td>0.00 €</td>
-                </tr>
-            </table>
-        </div>
-
-        <div class="table-wrapper">
-            <table>
-                <tr>
                     <th>20</th>
-                </tr>
-                <tr>
-                    <td id="price20">33.97 €</td>
-                <tr>
-                    <td id="total20">339.73 €</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                </tr>
-                <tr>
-                    <td>127.88 €</td>
-                </tr>
-                <tr>
-                    <td>40.00 €</td>
-                </tr>
-            </table>
-        </div>
-
-        <div class="table-wrapper">
-            <table>
-                <tr>
                     <th>
                         <div class="input-group">
-                            <button onclick="decrement()">-</button>
+                            <button onclick="decrement()">▼</button>
                             <input id="inputNumber" type="text" placeholder="30" oninput="showNumber()" readonly>
-                            <button onclick="increment()">+</button>
+                            <button onclick="increment()">▲</button>
                         </div>
                     </th>
                 </tr>
                 <tr>
+                    <td>Preis pro Kurs</td>
+                    <td id="price10">33.97 €</td>
+                    <td id="price20">33.97 €</td>
                     <td><div id="outputNumber"></div></td>
-                </tr>
                 <tr>
+                    <td>Preis gesamt</td>
+                    <td id="total10">339.73 €</td>
+                    <td id="total20">339.73 €</td>
                     <td><div id="ganzerPreis"></div></td>
                 </tr>
                 <tr>
+                    <td>Anzahl Monate <br> <small>(bei 1 Kurs pro Woche)</small></td>
+                    <td>3</td>
+                    <td>5</td>
                     <td id="monateX"></td>
                 </tr>
                 <tr>
+                    <td>Monatsrate</td>
+                    <td>113.23 €</td>
+                    <td>127.88 €</td>
                     <td id="monatsRate"></td>
                 </tr>
                 <tr>
+                    <td>Ersparnis <br><small>gegenüber 10er-Karten</small></td>
+                    <td>0.00 €</td>
+                    <td>40.00 €</td>
                     <td id="ersparnisZehner"></td>
                 </tr>
             </table>
         </div>
-
     </div>
 </body>
 </html>

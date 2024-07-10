@@ -1,0 +1,106 @@
+html {
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    margin: 0; /* Remove default body margin */
+    display: flex;
+    justify-content: center; /* Center the container horizontally */
+}
+
+.container {
+    display: flex;
+    width: 800px;
+    gap: 0px; /* Adjust the gap between tables */
+    padding: 20px; /* Add some padding around the tables */
+    overflow-x: hidden; /* Enable horizontal scrolling if needed */
+    overflow-y: hidden; /* Enable horizontal scrolling if needed */
+}
+
+.table-wrapper {
+    flex: 1; /* Take up available space */
+    overflow-x: hidden; /* Enable horizontal scrolling if needed */
+    overflow-y: hidden;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+     /* max-width: 400px; Limit maximum width of each table */
+}
+
+th,
+td {
+    text-align: center;
+    padding: 15px 0px;
+    border-bottom: 1px solid #ddd;
+    background-color: white;
+    height: 50px;
+    width: 25%;
+}
+
+th {
+    background-color: #385da8;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px;
+    text-align: center;
+}
+
+td:hover {
+    background-color: #f6f6f6;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+#inputNumber {
+    width: 60px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    border: none;
+    text-align: center;
+    background-color: #385da8;
+    color: white;
+    margin: 0 5px;
+}
+
+.input-group button {
+    width: 40px;
+    height: 40px;
+    border: 1px solid lightgrey;
+    background-color: white;
+    color: #385da8;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-group button:hover {
+    color: #f9b206;
+}
+
+@media screen and (max-width: 800px) {
+    /* Adjustments for smaller screens */
+    .container {
+        width: 100%;
+        /* align-items: stretch; */
+    }
+    .table-wrapper {
+        max-width: none; /* Remove max-width for smaller screens */
+    }
+
+    .input-group {
+        flex-direction: column-reverse;
+    }
+}
